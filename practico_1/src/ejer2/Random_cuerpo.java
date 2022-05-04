@@ -8,19 +8,20 @@ public class Random_cuerpo {
 	int valor;
 	Random azar = new Random();
 	void iniciar(){		
-			
+		valor=generarAleatorio();
 			int num;
 			int resul;
 			
 			do{
-				valor=generarAleatorio();
 				num=pedirNumero();
 				resul=compararNumeros(num, valor);
-				System.out.println(resul);
-				if(resul<0)
-					System.out.println("el numero es demasiado chico");
-				else
+				if(resul>0)
 					System.out.println("el numero es demasiado grande");
+				else
+					if(resul<0) {
+						System.out.println("el numero es demasiado chico");	
+					}
+					
 					
 			}while(resul!=0);
 			System.out.println("Felicitaciones acertaste!!");
